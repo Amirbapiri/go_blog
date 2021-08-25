@@ -41,12 +41,26 @@
             </ul>
         </div>
     </nav>
-
-    {{block "content" .}}
-
-    {{end}}
-
-
+    <main role="main" class="container">
+        <div class="row">
+            <div class="col-md-8">
+                {{block "content" .}}
+                {{end}}
+            </div>
+            <div class="col-md-4">
+                <div class="content-section">
+                    <h3>Our Sidebar</h3>
+                    <ul class="list-group">
+                        <li class="list-group-item list-group-item-light">Latest Posts</li>
+                        <li class="list-group-item list-group-item-light">Announcements</li>
+                        <li class="list-group-item list-group-item-light">Calendars</li>
+                        <li class="list-group-item list-group-item-light">etc</li>
+                    </ul>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
     {{/*    Footer section */}}
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
