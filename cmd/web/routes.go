@@ -10,6 +10,9 @@ import (
 func routes(app *config.AppConfig) http.Handler {
 	mux := chi.NewRouter()
 
+	//Using middlewares
+	mux.Use(LoadSession)
+
 	mux.Get("/", handlers.Repo.Home)
 
 	return mux
