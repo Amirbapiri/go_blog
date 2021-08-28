@@ -35,3 +35,7 @@ func (repo *Repository) Home(w http.ResponseWriter, r *http.Request) {
 		StringMap: data,
 	})
 }
+
+func (repo *Repository) Register(w http.ResponseWriter, r *http.Request) {
+	render.GoRenderTemplate(w, r, "register.page.tmpl", &models.TemplateData{})
+}
